@@ -119,6 +119,3 @@ CoinGecko public API rate limits can occasionally return temporary errors. The U
 
 Public API prices can differ slightly from CoinGecko's website because refresh timing and aggregation windows are not always identical.
 
-## Interview Notes
-
-See `ARCHITECTURE.md` for a concise explanation of the folder structure, state management, API resilience strategy, performance choices, and known limitations.
