@@ -20,6 +20,14 @@ export function Header({
   activeNav,
   onNavChange,
 }) {
+   const totalMarketCap = assets.reduce((sum, asset) => sum + (asset.market_cap ?? 0), 0);
+  const totalVolume = assets.reduce((sum, asset) => sum + (asset.total_volume ?? 0), 0);
+  const bitcoin = assets.find((asset) => asset.id === 'bitcoin');
+  const ethereum = assets.find((asset) => asset.id === 'ethereum');
+  const bitcoinDominance = totalMarketCap > 0 ? ((bitcoin?.market_cap ?? 0) / totalMarketCap) * 100 : 0;
+  const ethereumDominance = totalMarketCap > 0 ? ((ethereum?.market_cap ?? 0) / totalMarketCap) * 100 : 0;
+  const sourceLabel = dataModeLabels[dataMode] ?? 'Checking';
+
  
   return (
 
