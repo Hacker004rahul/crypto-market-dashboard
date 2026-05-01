@@ -7,7 +7,7 @@ const dataModeLabels = {
   loading: 'Loading',
 };
 
-const navItems = ['Cryptocurrencies', 'Exchanges', 'NFT', 'Learn', 'Products'];
+const navItems = ['Cryptocurrencies', 'Exchanges', 'NFT', 'Products'];
 
 export function Header({
   assets = [],
