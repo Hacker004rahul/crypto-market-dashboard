@@ -29,24 +29,6 @@ export function Header({
   const sourceLabel = dataModeLabels[dataMode] ?? 'Checking';
 
   return (
-    <header className="border-b border-stone-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
-      <div className="border-b border-stone-200 bg-stone-50 dark:border-neutral-800 dark:bg-neutral-900">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 text-xs font-medium text-neutral-500 dark:text-neutral-400 sm:px-6 lg:px-8">
-          <div className="flex min-w-0 items-center gap-4 overflow-hidden">
-            <span className="shrink-0 text-emerald-700 dark:text-emerald-300">
-              {sourceLabel}: Crypto Market Report
-            </span>
-            <span className="hidden sm:inline">Coins: {assets.length || '--'}</span>
-            <span className="hidden md:inline">Market Cap: {formatCompactCurrency(totalMarketCap)}</span>
-            <span className="hidden lg:inline">24h Vol: {formatCompactCurrency(totalVolume)}</span>
-            <span className="hidden xl:inline">
-              Dominance: BTC {formatPercent(bitcoinDominance).replace('+', '')} / ETH{' '}
-              {formatPercent(ethereumDominance).replace('+', '')}
-            </span>
-          </div>
-          <span className="shrink-0">Updated {formatTime(lastUpdated)}</span>
-        </div>
-      </div>
 
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div className="flex items-center gap-4">
